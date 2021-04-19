@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
 
 import com.example.sampleproject.cardprogram.CardsProgram;
+import com.example.sampleproject.comparable.SortObjectByName;
 
 @SpringBootApplication
 public class SampleProjectApplication implements CommandLineRunner {
@@ -74,8 +75,13 @@ public class SampleProjectApplication implements CommandLineRunner {
 				break;
 				
 			case 9:
-				// 8. Largest Number from array 
+				// 9. Sort Numbers in decending order 
 				new SortInDecendingOrder().main();
+				break;
+				
+			case 10:
+				// 10. Compare person object 
+				new SortObjectByName().main();
 				break;
 				
 			default:
