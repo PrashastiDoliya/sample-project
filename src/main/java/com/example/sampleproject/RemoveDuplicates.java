@@ -3,13 +3,26 @@ package com.example.sampleproject;
 import java.util.HashSet;
 import java.util.Set;
 
-public class RemoveDuplicatesIntArray {
+public class RemoveDuplicates {
 	
 	public void main() {
 		int[] numbers = {1, 5, 2, 1, 6, 5, 3};
 		
+		System.out.print("Old Array : ");
+		for (int i : numbers) {
+			System.out.print(" " + i);
+		}
+		
 		removeDuplicates(numbers);
-		//removeDuplicatesFromIntArray(numbers);
+
+		int[] numberArray = {1, 5, 2, 1, 4, 5, 7, 2};
+
+		System.out.print("\nOld Array : ");
+		for (int i : numberArray) {
+			System.out.print(" " + i);
+		}
+
+		removeDuplicatesFromIntArray(numberArray);
 	    
 	}
 
@@ -23,9 +36,9 @@ public class RemoveDuplicatesIntArray {
 			}
 		}
 
-		System.out.print("New Array : ");
+		System.out.print("\nNew Array : ");
 		for (int i : numbers) {
-			System.out.print(i);			
+			System.out.print(" " + i);			
 		}
 		
 	}
@@ -38,8 +51,8 @@ public class RemoveDuplicatesIntArray {
 			newNum.add(integer);
 		}
 		
-		System.out.print("New Array : ");
-		newNum.stream().forEach(n -> System.out.print(n + " "));
+		System.out.print("\nNew Array : ");
+		newNum.stream().forEach(n -> System.out.print(" " + n));
 	}
 
 }

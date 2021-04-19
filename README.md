@@ -1,1 +1,1 @@
-# sample-programs
+# sample-project
