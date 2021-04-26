@@ -9,10 +9,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
 
 import com.example.sampleproject.cardprogram.CardsProgram;
-import com.example.sampleproject.comparable.SortObjectByName;
+import com.example.sampleproject.comparable.ComparableImpl;
+import com.example.sampleproject.comparator.ComparatorImpl;
 
 @SpringBootApplication
-public class SampleProjectApplication implements CommandLineRunner {
+public class SampleProjectApplication implements CommandLineRunner  {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(SampleProjectApplication.class); 
 	
@@ -80,8 +81,13 @@ public class SampleProjectApplication implements CommandLineRunner {
 				break;
 				
 			case 10:
-				// 10. Compare person object 
-				new SortObjectByName().main();
+				// 10. Compare person object using Comparable Interface
+				new ComparableImpl().main();
+				break;
+
+			case 11:
+				// 11. Compare Objects using Comparator Interface 
+				new ComparatorImpl().main();
 				break;
 				
 			default:
